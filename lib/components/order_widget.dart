@@ -34,7 +34,7 @@ class _OrderWidgetState extends State<OrderWidget> {
           ),
           if (_expanded)
             Container(
-              height: (widget.order.products.length * 25) + 10,
+              height: (widget.order.products.length * 45) + 10,
               padding: const EdgeInsets.symmetric(
                 horizontal: 15,
                 vertical: 4,
@@ -44,11 +44,13 @@ class _OrderWidgetState extends State<OrderWidget> {
                     .map((product) => Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(
-                              product.name,
-                              style: const TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
+                            Flexible(
+                              child: Text(
+                                product.name,
+                                style: const TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
                             Text(
